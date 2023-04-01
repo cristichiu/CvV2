@@ -1,0 +1,60 @@
+@import '../scss/colors/function.scss';
+
+#proiecte .content {
+    .generalContainer {
+         margin: 5rem; display: flex; overflow: auto; gap: 1rem; scroll-snap-type: x proximity; width: 100%;
+        .intersectionLoading {
+            flex: none; scroll-snap-align: start; width: 100%; height: calc(100vh - 10rem); max-height: 350px; min-width: 300px;
+            .projectContainer {
+                height: 100%; display: flex; justify-content: center; align-items: center; gap: 1rem;
+                .links {
+                    gap: 2rem; display: flex; color: getColor("text"); font-size: 1.3rem;
+                    .link { text-shadow: 0 0 5px getColor("shadow-dark"); }
+                    .link:nth-child(1) { color: getColor("text-accent"); cursor: pointer; }
+                    .link:nth-child(2) { cursor: no-drop; }
+                    .link:nth-child(3) { cursor: pointer; }
+                }
+                svg { 
+                    height: 100%; z-index: 1000; filter: drop-shadow(0 0 5px getColor("shadow-dark"));
+                    path:nth-child(1) { stroke-dasharray: 500; stroke-dashoffset: 500; animation: 3s test forwards 1s; stroke: getColor("text"); }
+                    path:nth-child(2) { opacity: 0; animation: 1s test2 ease-in-out forwards 1s; fill: getColor("text"); }
+                    path:nth-child(3) { opacity: 0; animation: 1s test2 ease-in-out forwards 3s; fill: getColor("text"); }
+                    path:nth-child(4) { opacity: 0; animation: 1s test2 ease-in-out forwards 3.5s; fill: getColor("text"); }
+                    path:nth-child(5) { opacity: 0; animation: 1s test2 ease-in-out forwards 4s; fill: getColor("text"); }
+                }
+                .poza { height: 100%; aspect-ratio: 16/9; background-image: url("../photo/proiecte/1.png"); background-size: cover; background-position: center; background-repeat: no-repeat; transition: 1s; }
+                @media (max-width: 1200px) {
+                    .poza { height: 75%; }
+                }
+                @media (max-width: 1000px) {
+                    .poza { height: 60%; }
+                }
+            }
+        }
+        @media (max-width: 800px) {
+            margin: 5rem 1rem;
+            .intersectionLoading {
+                max-height: 100vh;
+                .projectContainer {
+                    flex-direction: column-reverse; .poza { height: 100%; }
+                }
+            }
+        }
+        @media (min-width: 800px) {
+            .intersectionLoading .projectContainer .links {
+                flex-direction: column;
+                .link { writing-mode: vertical-lr; }
+            }
+        }
+        .loadingHidden .projectContainer { display: none; }
+        .loadingShow .projectContainer { display: flex; }
+    }
+    .generalContainer::-webkit-scrollbar { width: 0; height: 0; }
+}
+
+@keyframes test {
+    to { stroke-dashoffset: 0; }
+}
+@keyframes test2 {
+    to {opacity: 1; }
+}

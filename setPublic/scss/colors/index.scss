@@ -1,0 +1,42 @@
+body.light {
+    --color-background: white;
+    --color-bqckground-soft: rgba(200, 200, 200, 0.1);
+    --color-menu: rgb(200, 200, 200);
+    --color-menu-soft: rgba(200, 200, 200, 0.5);
+    --color-text: rgb(0, 0, 0);
+    --color-shadow-light: black;
+    --color-shadow-dark: rgb(150, 150, 150);
+    --color-shadow-pulse1: rgba(0, 0, 0, 0);
+    --color-shadow-pulse2: rgba(0, 0, 0, 0.4);
+    --color-text-accent: red;
+    --color-text-ok: rgb(0, 255, 0);
+    --color-text-link: rgb(98,1,141);
+}
+body.gray, body {
+    --color-background: rgb(50,50,57);
+    --color-background-soft: rgba(30,30,34, .1);
+    --color-menu: rgb(30,30,34);
+    --color-menu-soft: rgba(30,30,34, .5);
+    --color-text: white;
+    --color-shadow-light: white;
+    --color-shadow-dark: black;
+    --color-shadow-pulse1: rgba(255, 255, 255, 0);
+    --color-shadow-pulse2: rgba(255, 255, 255, .4);
+    --color-text-accent: red;
+    --color-text-ok: rgb(0, 255, 0);
+    --color-text-link: rgb(98,1,141);
+}
+body.dark {
+    --color-background: rgb(28, 28, 28);
+    --color-background-soft:  rgba(64, 64, 64, 0.1);
+    --color-menu: rgb(63, 63, 63);
+    --color-menu-soft:  rgba(64, 64, 64, 0.5);
+    --color-text: white;
+    --color-shadow-light: white;
+    --color-shadow-dark: rgb(100, 100, 100);
+    --color-shadow-pulse1: rgba(255, 255, 255, 0);
+    --color-shadow-pulse2: rgba(255, 255, 255, .4);
+    --color-text-accent: red;
+    --color-text-ok: rgb(0, 255, 0);
+    --color-text-link: rgb(98,1,141);
+}
