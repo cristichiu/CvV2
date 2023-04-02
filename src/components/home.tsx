@@ -84,7 +84,7 @@ const Home = () => {
     return (<>
     <section id="acasa">
         <div className="content loadingHidden">
-        <HomeBackground />
+            <HomeBackground />
             <div className="generalContainer">
                 <div className="topGeneralContainer" onClick={pagesControler}>
                     <div className={`pages ${!load && 'invizible'}`}><HomePage1 /><HomePage2 /><HomePage3 /><HomePage4 /><HomePage5 /></div>

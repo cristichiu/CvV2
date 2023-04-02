@@ -14,6 +14,8 @@ const General = () => {
             entries.forEach((entry) => {
                 if(entry.isIntersecting) {
                     entry.target.classList.add("loadingShow")
+                } else {
+                    entry.target.classList.remove("loadingShow")
                 }
             })
         })
