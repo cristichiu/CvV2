@@ -1,0 +1,36 @@
+body.light {
+    --color-background: white;
+    --color-menu: rgb(200, 200, 200);
+    --color-menu_soft: rgba(200, 200, 200, 0.5);
+    --color-text: rgb(0, 0, 0);
+    --color-shadow-light: black;
+    --color-shadow-dark: rgb(150, 150, 150);
+    --color-shadow-pulse1: rgba(0, 0, 0, 0);
+    --color-shadow-pulse2: rgba(0, 0, 0, 0.4);
+    --color-text-accent: red;
+    --color-ok-text: rgb(0, 255, 0);
+}
+body.gray, body {
+    --color-background: rgb(50,50,57);
+    --color-menu: rgb(30,30,34);
+    --color-menu_soft: rgba(30,30,34, .5);
+    --color-text: white;
+    --color-shadow-light: white;
+    --color-shadow-dark: black;
+    --color-shadow-pulse1: rgba(255, 255, 255, 0);
+    --color-shadow-pulse2: rgba(255, 255, 255, .4);
+    --color-text-accent: red;
+    --color-ok-text: rgb(0, 255, 0);
+}
+body.dark {
+    --color-background: rgb(10, 10, 10);
+    --color-menu: rgb(63, 63, 63);
+    --color-menu_soft:  rgba(64, 64, 64, 0.5);
+    --color-text: white;
+    --color-shadow-light: white;
+    --color-shadow-dark: black;
+    --color-shadow-pulse1: rgba(255, 255, 255, 0);
+    --color-shadow-pulse2: rgba(255, 255, 255, .4);
+    --color-text-accent: red;
+    --color-ok-text: rgb(0, 255, 0);
+}

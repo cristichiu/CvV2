@@ -1,0 +1,11 @@
+@import './colors/function.scss';
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+#root { height: 100vh; width: 100vw; background-color: getColor("background"); overflow: hidden; transition: .1s; }
+
+*::-webkit-scrollbar { width: 5px; height: 5px; }
+*::-webkit-scrollbar-track { box-shadow: inset 0 0 5px rgb(0, 0, 0); border-radius: 10px; }
+*::-webkit-scrollbar-thumb { background: white; border-radius: 10px; }
+*::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:focus { background: #9b9b9b; }
+*::-webkit-scrollbar-track:hover, *::-webkit-scrollbar-track:focus { box-shadow: inset 0 0 15px rgb(0, 0, 0); }
+.invizible { opacity: 0; }

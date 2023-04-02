@@ -1,0 +1,22 @@
+@import './colors/function.scss';
+
+.colorNavBar {
+    position: fixed; right: 1rem; bottom: 1rem; display: flex; gap: 1.5rem; align-items: center; z-index: 1000;
+    .buttonContainer { padding: 1.5rem; background: getColor("background"); border-radius: 50%; cursor: pointer; position: relative; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 5px 1px getColor("shadow-light"); }
+    .buttonContainer::after { content: ""; position: absolute; width: 70%; height: 70%; border: 3px solid getColor("text"); border-radius: 50%; }
+    .nav-linkContainer {
+        display: flex; gap: 1.5rem; transform: scale(0); transition: .3s; transform-origin: right;
+        & > div { padding: 1.5rem; border-radius: 50%; cursor: pointer; position: relative; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 5px 1px getColor("shadow-light"); }
+        & > div::after { content: ""; position: absolute; width: 70%; height: 70%; border: 3px solid getColor("text"); border-radius: 50%; }
+        & > div:nth-child(1) { background: rgb(205, 205, 205); }
+        & > div:nth-child(2) { background: rgb(50,50,57); }
+        & > div:nth-child(3) { background: black; }
+    }
+    &.active {
+        .nav-linkContainer { transform: scale(1); }
+    }
+    @media (max-width: 800px) {
+        flex-direction: column;
+        .nav-linkContainer { flex-direction: column; transform-origin: bottom center; }
+    }
+}
