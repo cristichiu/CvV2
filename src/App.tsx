@@ -15,7 +15,7 @@ function App() {
   <BrowserRouter>
     <Suspense>
       <Routes>
-        <Route path='general' element={<General />}></Route>
+        <Route path='home' element={<General />}></Route>
         {/* <Route path='home' element={<Home />}></Route>
         <Route path='despre' element={<Despre />}></Route>
         <Route path='proiecte' element={<Proiecte />}></Route>
