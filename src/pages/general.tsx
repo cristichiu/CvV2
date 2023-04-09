@@ -1,12 +1,20 @@
 import '../../setPublic/scss/general.scss'
+import { useEffect, lazy, Suspense } from 'react'
 
-import Home from "../components/home"
-import GeneralNavBar from "../components/generalNavBar"
-import ColorNavBar from '../components/colorNavBar'
-import Abilitati from '../components/abilitati'
-import Footer from '../components/footer'
-import { useEffect } from 'react'
-import Proiecte from '../components/proiecte'
+// import Home from "../components/home"
+// import GeneralNavBar from "../components/generalNavBar"
+// import ColorNavBar from '../components/colorNavBar'
+// import Abilitati from '../components/abilitati'
+// import Footer from '../components/footer'
+// import Proiecte from '../components/proiecte'
+// import ContactMe from '../components/contactMe'
+const Home = lazy(() => import('../components/home'))
+const GeneralNavBar = lazy(() => import('../components/generalNavBar'))
+const ColorNavBar = lazy(() => import('../components/colorNavBar'))
+const Abilitati = lazy(() => import('../components/abilitati'))
+const Footer = lazy(() => import('../components/footer'))
+const Proiecte = lazy(() => import('../components/proiecte'))
+const ContactMe = lazy(() => import('../components/contactMe'))
 
 const General = () => {
     useEffect(() => {
@@ -22,8 +30,8 @@ const General = () => {
         const loadingHidden = document.querySelectorAll('.loadingHidden')
         loadingHidden.forEach((el) => observer.observe(el))
     }, [])
-    return (<div className="generalContent">
-    <GeneralNavBar /><ColorNavBar /><Footer />
+    return (<div id='general' className="generalContent">
+    <GeneralNavBar /><ColorNavBar /><Footer /><ContactMe />
     <Home />
     <Abilitati />
     <Proiecte />

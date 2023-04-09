@@ -1,10 +1,10 @@
 @import './colors/function.scss';
 
 .generalNavBar {
-    position: fixed; right: 1rem; top: 1rem; display: flex; gap: 1.5rem; align-items: center; z-index: 1000;
+    position: fixed; right: 1rem; top: 1rem; display: flex; gap: 1.5rem; align-items: center; z-index: 2000;
     .nav-linkContainer {
         display: flex; gap: 1.5rem; transform: scale(0); transition: .3s; transform-origin: right;
-        .nav-link { font-size: 1.2rem; letter-spacing: .25rem; text-decoration: none; color: getColor("text"); font-family: sans-serif; text-shadow: 0 0 5px getColor("shadow-dark"); @media (max-width: 1000px) { letter-spacing: .1rem; }}
+        .nav-link { font-size: 1.2rem; letter-spacing: .25rem; text-decoration: none; color: getColor("text"); font-family: sans-serif; text-shadow: 0 0 5px getColor("shadow-dark"); cursor: pointer; @media (max-width: 1000px) { letter-spacing: .1rem; }}
     }
     &.active {
         .nav-linkContainer { transform: scale(1) }

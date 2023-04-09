@@ -9,17 +9,25 @@ const GeneralNavBar = () => {
         const generalNavBar = document.getElementsByClassName("generalNavBar")[0]
         generalNavBar.classList.toggle("active")
     }
+    function contactMeCon() {
+        const contactMeContainer: any = document.getElementById("contactMe")
+        contactMeContainer.classList.add("active")
+    } 
+    function contactMeDis() {
+        const contactMeContainer: any = document.getElementById("contactMe")
+        contactMeContainer.classList.remove("active")
+    }
     useEffect(() => {
         if(window.innerWidth > 800) document.getElementsByClassName("generalNavBar")[0].classList.add("active")
     }, [])
     return (<>
     <nav className="generalNavBar">
         <div className="nav-linkContainer">
-            <a className="nav-link active" href="#acasa">Acasă</a>
-            <a className="nav-link" href="#abilitati">Abilitați</a>
-            <a className="nav-link" href="#proiecte">Proiecte</a>
-            <a className="nav-link" href="#test">Despre</a>
-            <a className="nav-link" href="#test">Contactează-mă</a>
+            <a className="nav-link active" href="#acasa" onClick={contactMeDis}>Acasă</a>
+            <a className="nav-link" href="#abilitati" onClick={contactMeDis}>Abilitați</a>
+            <a className="nav-link" href="#proiecte" onClick={contactMeDis}>Proiecte</a>
+            {/* <a className="nav-link" href="#test">Despre</a> */}
+            <div className="nav-link" onClick={contactMeCon}>Contactează-mă</div>
         </div>
         <div className="buttonContainer" onClick={click}><SlMenu className="button open" /><TfiClose className="button close" /></div>
     </nav>

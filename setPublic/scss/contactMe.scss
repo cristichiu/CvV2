@@ -1,0 +1,58 @@
+@import "./colors/function.scss";
+
+#contactMe {
+    position: fixed; width: 100vw; height: 100vh; z-index: 1500; bottom: -100%; display: flex; justify-content: center; align-items: flex-end; opacity: 0;
+    .contactMeBackDrop { position: absolute; width: 100%; height: 100%; backdrop-filter: blur(1px); z-index: 1600; cursor: pointer; }
+    &.active { bottom: 0; opacity: 1; }
+    .content {
+        width: 100%; height: 50%; max-width: 800px; min-height: 400px; background: getColor("menu"); transition: .5s; z-index: 1700; box-shadow: 0 0 50px 10px getColor("shadow-dark"); translate: 0 100%; border-radius: 2rem 2rem 0 0;
+        .generalContainer {
+            padding: 2rem; overflow: auto; height: 100%; display: flex; flex-direction: column; align-items: center; width: 100%; position: relative; font-family: Arial, Helvetica, sans-serif;
+            .itemGmail {
+                width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 3rem; gap: 1rem; max-width: 500px;
+                input { display: flex; width: 100%; padding: .5rem 1rem; border: none; background: getColor("menu"); box-shadow: 0 0 10px 1px getColor("shadow-dark"); border-radius: 1rem; color: getColor("text") }
+                textarea { max-width: 100%; min-width: 50%; max-height: 150px; display: flex; width: 100%; height: 100px; background: getColor("menu"); color: getColor("text"); border: none; box-shadow: 0 0 10px 1px getColor("shadow-dark"); border-radius: 1rem; padding: 1rem }
+                .send { width: 100%; text-align: center; padding: .5rem 1rem; box-shadow: 0 0 10px 1px getColor("shadow-dark"); border-radius: 1rem; color: getColor("text"); cursor: pointer; font-size: 1.2rem; }
+                .inputError { border: 1px solid red !important; animation: .3s shake forwards ease-in-out; }
+                .loading {
+                    display: flex; position: relative; width: 80px; height: 2rem;
+                    * { position: absolute; width: 13px; height: 13px; border-radius: 50%; background: #fff; }
+                    div:nth-child(1) { left: 8px; animation: lds-ellipsis1 0.6s infinite; }
+                    div:nth-child(2) { left: 8px; animation: lds-ellipsis2 0.6s infinite; }
+                    div:nth-child(3) { left: 32px; animation: lds-ellipsis2 0.6s infinite; }
+                    div:nth-child(4) { left: 56px; animation: lds-ellipsis3 0.6s infinite; }
+                }
+            }
+            .itemFooter {
+                display: flex; justify-content: center; align-items: center; max-width: 500px;
+                .items {
+                    gap: .5rem 2rem; display: flex; flex-wrap: wrap;
+                    .item-link { color: white; font-size: 1.2rem; a, u { color: white; cursor: pointer; } }
+                    .item-link-phone { display: flex; gap: .5rem }
+                }
+            }
+            .closebut {
+                display: flex; justify-content: center; align-items: center; padding: 1.5rem; cursor: pointer; border-radius: 50%; background: getColor("background"); box-shadow: 0 0 5px 1px getColor("shadow-light"); position: fixed; right: 1.5rem; top: 1rem;
+                .button { font-size: 1.5rem; color: getColor("text"); position: absolute; animation: spin .5s forwards; }
+            }
+        }
+    }
+    .content:hover { height: 70%; }
+    &.active .content { translate: 0 0; }
+}
+
+@keyframes shake { 0% { translate: 0 0; } 10% { translate: 5px 5px; } 20% { translate: 5px 0; } 30% { translate: 0 5px; } 40% { translate: 0 0; } 50% { translate: 5px 5px; } 60% { translate: 5px 0; } 70% { translate: 0 5px; } 80% { translate: 5px 0; } 90% { translate: 5px 5px; } 100% { translate: 0 0; } }
+
+@keyframes lds-ellipsis1 {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+@keyframes lds-ellipsis3 {
+    from { transform: scale(1); }
+    to { transform: scale(0); }
+}
+@keyframes lds-ellipsis2 {
+    from { transform: translate(0, 0); }
+    to { transform: translate(24px, 0); }
+}
+  

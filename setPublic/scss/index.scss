@@ -9,3 +9,5 @@
 *::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:focus { background: getColor("menu"); }
 *::-webkit-scrollbar-track:hover, *::-webkit-scrollbar-track:focus { box-shadow: inset 0 0 15px getColor("shadow-light") }
 .invizible { opacity: 0; }
+.green { color: getColor("text-ok") }
+.red { color: getColor("text-accent") }
