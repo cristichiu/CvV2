@@ -1,0 +1,74 @@
+@import '../scss/colors/function.scss';
+
+#proiecte .content {
+    display: flex; flex-direction: column; justify-content: center; gap: 2rem;
+    .generalContainer {
+        display: flex; overflow: auto; gap: 1rem; scroll-snap-type: x proximity; width: 100%; scroll-behavior: smooth;
+        .intersectionLoading {
+            flex: none; scroll-snap-align: start; width: 100%; height: calc(100vh - 10rem); max-height: 350px; min-width: 300px;
+            .projectContainer {
+                height: 100%; display: flex; justify-content: center; align-items: center; gap: 1rem;
+                .links {
+                    gap: 2rem; display: flex; color: getColor("text"); font-size: 1.3rem; opacity: 0; animation: 1s apear2 ease-in-out forwards 4.5s;
+                    .link { text-shadow: 0 0 5px getColor("shadow-dark"); cursor: pointer; }
+                    .block { color: getColor("text-accent"); cursor: no-drop; }
+                }
+                svg { 
+                    height: 100%; z-index: 1000; filter: drop-shadow(0 0 5px getColor("shadow-dark"));
+                    path:nth-child(1) { stroke-dasharray: 500; stroke-dashoffset: 500; animation: 3s apear1 forwards 1s; stroke: getColor("text"); }
+                    path:nth-child(2) { opacity: 0; animation: 1s apear2 ease-in-out forwards 1s; fill: getColor("text"); }
+                    path:nth-child(3) { opacity: 0; animation: 1s apear2 ease-in-out forwards 3s; fill: getColor("text"); }
+                    path:nth-child(4) { opacity: 0; animation: 1s apear2 ease-in-out forwards 3.5s; fill: getColor("text"); }
+                    path:nth-child(5) { opacity: 0; animation: 1s apear2 ease-in-out forwards 4s; fill: getColor("text"); }
+                }
+                .poza1 { background-image: url("../photo/proiecte/1.png"); }
+                .poza2 { background-image: url("../photo/proiecte/2.png"); }
+                .poza3 { background-image: url("../photo/proiecte/3.png"); }
+                .poza4 { background-image: url("../photo/proiecte/4.png"); }
+                .poza5 { background-image: url("../photo/proiecte/5.png"); }
+                .poza { height: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; background-repeat: no-repeat; animation: 1s apear2 ease-in-out forwards 2s; opacity: 0; border-radius: 1rem; }
+                @media (max-width: 1300px) {
+                    .poza { height: 75%; }
+                }
+                @media (max-width: 1100px) {
+                    .poza { height: 60%; }
+                }
+            }
+        }
+        @media (max-width: 800px) {
+            .intersectionLoading {
+                max-height: 500px;
+                .projectContainer {
+                    flex-direction: column-reverse; .poza { height: 100%; }
+                }
+            }
+        }
+        @media (min-width: 800px) {
+            .intersectionLoading .projectContainer .links {
+                flex-direction: column;
+                .link { writing-mode: vertical-lr; }
+            }
+        }
+        .loadingHidden .projectContainer { display: none; }
+        .loadingShow .projectContainer { display: flex; }
+    }
+    .generalContainer::-webkit-scrollbar { width: 0; height: 0; }
+    .buttons {
+        display: flex; justify-content: center; align-items: center; gap: 4rem;
+        .arrow:nth-child(1) { --rotate: -45deg; border-left: 5px solid getColor("text-soft"); }
+        .arrow:nth-child(3) { --rotate: 45deg; border-right: 5px solid getColor("text-soft"); }
+        .arrow { width: 3rem; height: 5px; border-top: 5px solid getColor("text-soft"); transition: 1s; }
+        .arrow.active { rotate: var(--rotate); height: 3rem; border-top: 5px solid getColor("text"); }
+        .arrow.active:nth-child(1) { border-left: 5px solid getColor("text"); translate: 1rem 0; }
+        .arrow.active:nth-child(3) { border-right: 5px solid getColor("text"); translate: -1rem 0; }
+
+        .pagenr { color: getColor("text"); font-size: 2rem; }
+    }
+}
+
+@keyframes apear1 {
+    to { stroke-dashoffset: 0; }
+}
+@keyframes apear2 {
+    to {opacity: 1; }
+}

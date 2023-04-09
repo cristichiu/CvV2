@@ -17,8 +17,8 @@ const GeneralNavBar = () => {
         <div className="nav-linkContainer">
             <a className="nav-link active" href="#acasa">Acasă</a>
             <a className="nav-link" href="#abilitati">Abilitați</a>
+            <a className="nav-link" href="#proiecte">Proiecte</a>
             <a className="nav-link" href="#test">Despre</a>
-            <a className="nav-link" href="#test">Proiecte</a>
             <a className="nav-link" href="#test">Contactează-mă</a>
         </div>
         <div className="buttonContainer" onClick={click}><SlMenu className="button open" /><TfiClose className="button close" /></div>

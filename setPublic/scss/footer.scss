@@ -1,0 +1,25 @@
+@import './colors/function.scss';
+
+.footerContainer {
+    display: flex; gap: 2rem; position: fixed; left: 1rem; justify-content: center; bottom: 1rem; z-index: 1500;
+    .footer-link:nth-child(1) { --delay: .5s } .footer-link:nth-child(2) { --delay: .75s } .footer-link:nth-child(3) { --delay: 1s }
+    .footer-link { display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer; }
+    .footer-link:hover { animation: iconRotation .5s forwards; }
+    .footer-link > * { width: 2rem; height: 2rem; fill: getColor("text"); translate: -100px 0; scale: 0; opacity: 0; animation: footerApear .5s forwards var(--delay); }
+    .footer-link::before { content: attr(data-content);color: getColor("text"); position: absolute; opacity: 0; transition: .2s; bottom: -1.2rem }
+    .footer-link:hover::before { opacity: 1; }
+    .footer-link.active::before { color: getColor("text-ok"); }
+    @media (min-width: 1000px) {
+        height: 100vh; top: 0; flex-direction: column;
+        .footer-link::before { top: -1.2rem; }
+    }
+}
+@keyframes iconRotation {
+    10% { rotate: 20deg; }
+    30% { rotate: -20deg; }
+    60% { rotate: 20deg; }
+    100% { rotate: 0; }
+}
+@keyframes footerApear {
+    to { opacity: 1; translate: 0 0; scale: 1; }
+}

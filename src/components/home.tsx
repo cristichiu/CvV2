@@ -8,9 +8,6 @@ import HomePage5 from "../../setPublic/svg/homePages/page5"
 import '../../setPublic/scss/home.scss'
 import { useEffect, useState } from "react"
 import anime from 'animejs/lib/anime.es.js';
-import { FaDiscord } from 'react-icons/fa'
-import { AiFillGithub } from 'react-icons/ai'
-import { BsFillTelephoneFill } from 'react-icons/bs'
 
 const Home = () => {
     const maxPage: number = 5
@@ -84,35 +81,21 @@ const Home = () => {
             }, 2000)
         }
     }
-    function footerLinkClick(type: string) {
-        const element: any = document.getElementsByClassName(type)[0]
-        element.dataset.content = "Copiat"
-        element.classList.add("active")
-        setTimeout(async () => {
-            element.dataset.content = type
-            element.classList.remove("active")
-        }, 5000)
-    }
     return (<>
     <section id="acasa">
-        <HomeBackground />
-        <div className="generalHomeContainer">
-            <div className="leftGeneralHomeContainer">
-                <a className="footer-link" href="" data-content="Discord"><FaDiscord /></a>
-                <a className="footer-link" href="" data-content="GitHub"><AiFillGithub /></a>
-                <div className="footer-link Telefon" data-content="Telefon" onClick={() => footerLinkClick("Telefon")}><BsFillTelephoneFill /></div>
-            </div>
-            <div className="rightGeneralHomeContainer">
-                <div className="topGeneralHomeContainer" onClick={pagesControler}>
+        <div className="content loadingHidden">
+            <HomeBackground />
+            <div className="generalContainer">
+                <div className="topGeneralContainer" onClick={pagesControler}>
                     <div className={`pages ${!load && 'invizible'}`}><HomePage1 /><HomePage2 /><HomePage3 /><HomePage4 /><HomePage5 /></div>
                     <div className="poza"></div>
                 </div>
-                <div className="bottomGeneralHomeContainer" onClick={pagesControler}>Mai multe informații →</div>
+                <div className="bottomGeneralContainer" onClick={pagesControler}>Mai multe informații →</div>
             </div>
+            <a className="arrowParrent" href="#abilitati">
+                <div className="arrow"></div>
+            </a>
         </div>
-        <a className="arrowParrent" href="#abilitati">
-            <div className="arrow"></div>
-        </a>
     </section>
     </>)
 }

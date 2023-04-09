@@ -4,7 +4,7 @@ import '../../setPublic/scss/homeBackground.scss'
 
 const HomeBackground = () => {
     useEffect(() => {
-        const path = document.getElementsByTagName('path')
+        const path: any = document.querySelectorAll('.homeBg path')
         for(let i=0; i<path.length; i++) {
             path[i].style.strokeDasharray = path[i].getTotalLength().toString()
             path[i].style.strokeDashoffset = path[i].getTotalLength().toString()
