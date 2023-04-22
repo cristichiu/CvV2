@@ -43,9 +43,9 @@ const Proiecte = () => {
                 <section className='intersectionLoading loadingHidden' id='project1'>
                     <div className='projectContainer'>
                         <div className='links'>
-                            <div className='link block'>Neterminat</div>
-                            <div className='link block'>Proiect ↩</div>
-                            <div className='link'>Sursă ↩</div>
+                            <div className='link block red'>Neterminat</div>
+                            <div className='link block red'>Proiect ↩</div>
+                            <a className='link' href='https://github.com/cristichiu/ChiuDB' target='sursa'>Sursă ↩</a>
                         </div>
                         <Project1 />
                         <div className="poza poza1"></div>
@@ -54,9 +54,9 @@ const Proiecte = () => {
                 <section className='intersectionLoading loadingHidden' id='project2'>
                     <div className='projectContainer'>
                         <div className='links'>
-                            <div className='link'>Terminat</div>
-                            <div className='link block'>Proiect ↩</div>
-                            <div className='link'>Sursă ↩</div>
+                            <div className='link block'>Terminat</div>
+                            <div className='link block red'>Proiect ↩</div>
+                            <a className='link' href='https://github.com/cristichiu/CvV2' target='sursa'>Sursă ↩</a>
                         </div>
                         <Project2 />
                         <div className="poza poza2"></div>
@@ -65,9 +65,9 @@ const Proiecte = () => {
                 <section className='intersectionLoading loadingHidden' id='project3'>
                     <div className='projectContainer'>
                         <div className='links'>
-                            <div className='link'>Terminat</div>
-                            <div className='link'>Proiect ↩</div>
-                            <div className='link'>Sursă ↩</div>
+                            <div className='link block'>Terminat</div>
+                            <a className='link' href='https://cv.cristichiu.repl.co/home' target='project'>Proiect ↩</a>
+                            <a className='link' href='https://github.com/cristichiu/CV' target='sursa'>Sursă ↩</a>
                         </div>
                         <Project3 />
                         <div className="poza poza3"></div>
@@ -76,9 +76,9 @@ const Proiecte = () => {
                 <section className='intersectionLoading loadingHidden' id='project4'>
                     <div className='projectContainer'>
                         <div className='links'>
-                            <div className='link'>Terminat</div>
-                            <div className='link'>Proiect ↩</div>
-                            <div className='link'>Sursă ↩</div>
+                            <div className='link block'>Terminat</div>
+                            <a className='link' href='https://moldova.cristichiu.repl.co/home' target='project'>Proiect ↩</a>
+                            <a className='link' href='https://github.com/cristichiu/moldova' target='sursa'>Sursă ↩</a>
                         </div>
                         <Project4 />
                         <div className="poza poza4"></div>
@@ -87,9 +87,9 @@ const Proiecte = () => {
                 <section className='intersectionLoading loadingHidden' id='project5'>
                     <div className='projectContainer'>
                         <div className='links'>
-                            <div className='link'>Terminat</div>
-                            <div className='link'>Proiect ↩</div>
-                            <div className='link'>Sursă ↩</div>
+                            <div className='link block'>Terminat</div>
+                            <a className='link' href='https://istoria.cristichiu.repl.co/' target='project'>Proiect ↩</a>
+                            <a className='link' href='https://github.com/cristichiu/istoria' target='sursa'>Sursă ↩</a>
                         </div>
                         <Project5 />
                         <div className="poza poza5"></div>

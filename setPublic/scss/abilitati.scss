@@ -23,17 +23,14 @@
             }
         }
         .rightContainer {
-            overflow: auto; width: calc(100vh - 10rem);
+            overflow: auto;
             .scrollContainer {
                 min-width: 500px; width: 100%; stroke: getColor("text");
                 .abilitatiSVG path { --delay: 0; animation: strokeApear 5s forwards var(--delay); }
             }
-            @media (max-width: 800px) {
-                margin: 1rem; width: calc(80% - 2rem);
-            }
-            @media (max-width: 650px) {
-                width: calc(100% - 2rem);
-            }
+            @media (max-width: 800px) { margin: 1rem; width: calc(80% - 2rem); }
+            @media (max-width: 650px) { width: calc(100% - 2rem); }
+            @media (min-height: 660px) { width: calc(100vh - 10rem); }
         }
     }
 }

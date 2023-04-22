@@ -1,7 +1,7 @@
 @import './colors/function.scss';
 
 .generalNavBar {
-    position: fixed; right: 1rem; top: 1rem; display: flex; gap: 1.5rem; align-items: center; z-index: 2000;
+    position: fixed; right: 5.5rem; top: 1.75rem; display: flex; align-items: center; z-index: 2000;
     .nav-linkContainer {
         display: flex; gap: 1.5rem; transform: scale(0); transition: .3s; transform-origin: right;
         .nav-link { font-size: 1.2rem; letter-spacing: .25rem; text-decoration: none; color: getColor("text"); font-family: sans-serif; text-shadow: 0 0 5px getColor("shadow-dark"); cursor: pointer; @media (max-width: 1000px) { letter-spacing: .1rem; }}
@@ -16,6 +16,7 @@
         }
     }
     &:not(.active) {
+        animation: 0s moveTo forwards 1s;
         .buttonContainer {
             .button {
                 &.close { display: none; }
@@ -24,11 +25,11 @@
         }
     }
     @media (max-width: 800px) {
-        align-items: self-start; gap: 0;
+        align-items: self-start; right: 4rem; top: 1rem;
         .nav-linkContainer { flex-direction: column; text-align: center; padding: 1rem; background: getColor("menu-soft"); border-radius: 1rem; margin-top: 3.5rem; transform-origin: right top; backdrop-filter: blur(2px); }
     }
     .buttonContainer {
-        display: flex; justify-content: center; align-items: center; padding: 1.5rem; cursor: pointer; border-radius: 50%; background: getColor("background"); box-shadow: 0 0 5px 1px getColor("shadow-light");
+        display: flex; justify-content: center; align-items: center; padding: 1.5rem; cursor: pointer; border-radius: 50%; background: getColor("background"); box-shadow: 0 0 5px 1px getColor("shadow-light"); position: fixed; top: 1rem; right: 1rem;
         .button { font-size: 1.5rem; color: getColor("text"); position: absolute; animation: spin .5s forwards; }
     }
 }
@@ -36,3 +37,5 @@
     from { rotate: -360deg }
     to { rotate: 0 }
 }
+
+@keyframes moveTo { to { top: -100%; } }

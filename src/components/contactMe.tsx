@@ -14,6 +14,7 @@ interface IGmailDataError {
 }
 
 import { TfiClose } from 'react-icons/tfi'
+import Loading from "./loading"
 
 const ContactMe = () => {
     function contactMeDis() {
@@ -96,7 +97,7 @@ const ContactMe = () => {
                     <div className="send" onClick={sendGmail}>Trimite</div>
                     {sended && <div className="green">Mesaj trimis cu succes!</div>}
                     {errSended && <div className="red">Nu am reușit să trimit acest mesaj</div>}
-                    {request && <div className="loading"><div></div><div></div><div></div><div></div></div> }
+                    {request && <Loading />}
                 </div>
                 <div className="itemFooter">
                     <div className="items">

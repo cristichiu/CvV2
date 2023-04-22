@@ -10,8 +10,9 @@
                 height: 100%; display: flex; justify-content: center; align-items: center; gap: 1rem;
                 .links {
                     gap: 2rem; display: flex; color: getColor("text"); font-size: clamp(.9rem, 5vw, 1.3rem); opacity: 0; animation: 1s apear2 ease-in-out forwards 4.5s;
-                    .link { text-shadow: 0 0 5px getColor("shadow-dark"); cursor: pointer; }
-                    .block { color: getColor("text-accent"); cursor: no-drop; }
+                    .link { text-shadow: 0 0 5px getColor("shadow-dark"); cursor: pointer; text-decoration: none; color: getColor("text"); }
+                    .block { cursor: no-drop; }
+                    .red { color: getColor("text-accent"); }
                 }
                 svg { 
                     height: 100%; z-index: 1000; filter: drop-shadow(0 0 5px getColor("shadow-dark"));
