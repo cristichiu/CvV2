@@ -27,7 +27,7 @@
                 .poza3 { background-image: url("../photo/proiecte/3.png"); }
                 .poza4 { background-image: url("../photo/proiecte/4.png"); }
                 .poza5 { background-image: url("../photo/proiecte/5.png"); }
-                .poza { height: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; background-repeat: no-repeat; animation: 1s apear2 ease-in-out forwards 2s; opacity: 0; border-radius: 1rem; margin: 0 1rem; }
+                .poza { height: calc(100% - 1rem); aspect-ratio: 16/9; background-size: cover; background-position: center; background-repeat: no-repeat; animation: 1s apear2 ease-in-out forwards 2s; opacity: 0; border-radius: 1rem; margin: 0 1rem; box-shadow: 0 0 10px 3px getColor("shadow-dark"); }
                 @media (max-width: 1300px) {
                     .poza { height: 75%; }
                 }
