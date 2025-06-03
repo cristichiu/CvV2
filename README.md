@@ -14,7 +14,7 @@
     npm install
     ```
 
-1.  **Start client:**
+2.  **Start client:**
 
     ```bash
     npm run dev
